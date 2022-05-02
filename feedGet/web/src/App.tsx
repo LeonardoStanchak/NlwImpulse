@@ -1,14 +1,14 @@
 import { useState } from 'react'
 
 interface ButtonProps {
-  text: string;
+  text ?: string;
 }
 
 function Button(props : ButtonProps) {
- return <button>{props.text}</button>
+ return <button className="bg-red-800 p-3">{props.text}</button>
 }
 
-function App{
+function App(){
   return(
     <div>
       <Button text="Enviar" />
