@@ -1,14 +1,29 @@
-import { CloseButton } from "./Closebutton";
+import { CloseButton } from "./CloseButton";
+import bugImageUrl from '../img/button-card/Figmoji/bug.svg';
+import ideaImageUrl from '../img/button-card/Figmoji/idea.svg';
+import thougImageUrl from '../img/button-card/Figmoji/thought.svg';
 
-const feedback = {
+const feedbackTypes = {
     BUG:{
-        title: 'Problema'
+        title: 'Problema',
+        image:{
+          source: bugImageUrl,
+          alt:'Imagem de um inseto'
+        }
     },
     IDEA:{
-        title: 'Ideia'
+        title: 'Ideia',
+        image:{
+          source: ideaImageUrl,
+          alt:'Imagem de uma lampada'
+        }
     },
     OTHER:{
-        title: 'Outro'
+        title: 'Outro',
+        image:{
+          source: thougImageUrl,
+          alt:'Imagem de um balao de pensamento'
+        }
     },
 };
 
@@ -22,7 +37,16 @@ export function WidgetForm() {
       </header>
 
       <div className="flex py-8 gap-2 w-full">
-
+        {Object.entries(feedbackTypes).map(([key, value]) =>{
+          return (
+            <button
+              key={key}
+              className="bg-zinc-800 rounded-lg py-5 w-24 flex-1 flex flex-col items-center gap-2 border-2 border-transparent hover:border-brand-500 focus:border-brand-500 focus:outline-none">
+              <img src={value.image.source} alt={value.image.alt} />
+              <span>{value.title}</span>
+            </button>
+          )
+        })}
       </div>
 
       <footer className="text-xl text-neutral-400">
