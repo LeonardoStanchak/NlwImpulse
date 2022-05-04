@@ -2,6 +2,7 @@ import { CloseButton } from "./CloseButton";
 import bugImageUrl from '../img/button-card/Figmoji/bug.svg';
 import ideaImageUrl from '../img/button-card/Figmoji/idea.svg';
 import thougImageUrl from '../img/button-card/Figmoji/thought.svg';
+import { useState } from "react";
 
 const feedbackTypes = {
     BUG:{
@@ -26,6 +27,10 @@ const feedbackTypes = {
         }
     },
 };
+
+export function WidgetForm() {
+  const [feedbackTypes, setFeedbackTypes] = useState(null);
+}
 
 export function WidgetForm() {
   return (
