@@ -1,7 +1,7 @@
 import { CloseButton } from "../CloseButton";
-import bugImageUrl from '../../img/button-card/Figmoji/bug.svg';
-import ideaImageUrl from '../../img/button-card/Figmoji/idea.svg';
-import thougImageUrl from '../../img/button-card/Figmoji/thought.svg';
+import bugImageUrl from '../../image/Bug.svg';
+import ideaImageUrl from '../../image/Idea.svg';
+import thougImageUrl from '../../image/Thought.svg';
 import { useState } from "react";
 import { FeedbackTypeStep } from "../Steps/FeedBackTypeStep";
 import { FeedbackContentStep } from "../Steps/FeedbackContentStep";
